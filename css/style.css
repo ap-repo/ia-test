@@ -1,4 +1,4 @@
-/********* 
+﻿/********* 
 
 Respoinsive App Landing Page
 by EGrappler.com
@@ -173,7 +173,6 @@ header .large-8 {
 }
 
 .download-btn {
-	background-color: #ff6000;
 	padding:31px 95px;
 	background-image:url(../img/button.png);
 	float:left;
