@@ -1,6 +1,6 @@
 <?php 
 // EDIT THE 2 LINES BELOW AS REQUIRED
-$send_email_to = "admin@egrappler.com";$email_subject = "Your email subject line";
+$send_email_to = "atendimento@apponto.net";$email_subject = "Atendimento do site";
 function send_email($name,$email,$email_message)
 {
   global $send_email_to;
