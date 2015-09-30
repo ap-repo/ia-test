@@ -1,6 +1,6 @@
 <?php 
 // EDIT THE 2 LINES BELOW AS REQUIRED
-$send_email_to = "atendimento@apponto.net";$email_subject = "Atendimento do site";
+$send_email_to = "junior.jpf@hotmail.com";$email_subject = "Atendimento do site";
 function send_email($name,$email,$email_message)
 {
   global $send_email_to;
@@ -62,5 +62,11 @@ $name = $_POST['name'];$email = $_POST['email'];
 $message = $_POST['message'];
 
 $return_array = validate($name,$email,$message);
-if($return_array['success'] == '1'){	send_email($name,$email,$message);}header('Content-type: text/json');echo json_encode($return_array);die();
+if($return_array['success'] == '1'){	if(send_email($name,$email,$message))
+	{
+		$return_array['success'] = '1';
+	}else
+	{
+		$return_array['success'] = '0';
+	}}header('Content-type: text/json');echo json_encode($return_array);die();
 ?>
